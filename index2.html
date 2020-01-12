@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="button1" onclick="showValue()">Show Value</button>
+    <button id="button2" onclick="showCal()">Calculate</button>
+    <script>
+        let a = [1,2,3,4,5,6,7,8,9];
+        let showValue = () => {
+            for(let value in a){
+                document.write(a[value] + "<br>");
+            }
+        }
+
+        let calculate = (array) => {
+            let result = 0;
+            for (let i=0;i<array.length;i++){
+                if(array[i]%2!=0){
+                    result += array[i];
+                }
+            }
+            return result;
+        }
+
+        let showCal = () => {
+            alert("Tong cac so le trong mang la: " +calculate(a));
+        }
+    </script>
+</body>
+</html>

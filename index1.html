@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <b>Enter a number:</b>
+    <input type="text" id="value">
+    <button id="button" onclick="showPrime()">Show</button>
+    <p id="para"></p>
+    <script>
+        let n = 2;
+        let isPrime = (number) => {
+            for(let i=2;i<=Math.sqrt(number);i++){
+                if(number%i==0 || number < 2)
+                    return false;
+            }
+            return true;
+        }
+
+        let showPrime = () => {
+            let a = document.getElementById("value").value;
+            while (n <= a){
+                if(isPrime(n)){
+                    document.write("so nguyen to: " + n + "<br>");
+                }
+            n++;
+            }
+        }
+    </script>
+</body>
+</html>
